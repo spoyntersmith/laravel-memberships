@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Spoyntersmith\LaravelMemberships\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelMembershipsCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-memberships';
 
     public $description = 'My command';
 

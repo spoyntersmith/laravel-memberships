@@ -1,22 +1,22 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "spoyntersmith/laravel-memberships",
+    "description": "This is my package laravel-memberships",
     "keywords": [
-        ":vendor_name",
+        "spoyntersmith",
         "laravel",
-        ":package_slug"
+        "laravel-memberships"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/spoyntersmith/laravel-memberships",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Séan Poynter-Smith",
+            "email": "spoyntersmith@users.noreply.github.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.0",
         "spatie/laravel-package-tools": "^1.9.2",
         "illuminate/contracts": "^9.0"
     },
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Spoyntersmith\\LaravelMemberships\\": "src",
+            "Spoyntersmith\\LaravelMemberships\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Spoyntersmith\\LaravelMemberships\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +54,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Spoyntersmith\\LaravelMemberships\\LaravelMembershipsServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelMemberships": "Spoyntersmith\\LaravelMemberships\\Facades\\LaravelMemberships"
             }
         }
     },
