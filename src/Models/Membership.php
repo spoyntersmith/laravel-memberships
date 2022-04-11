@@ -2,11 +2,22 @@
 
 namespace Spoyntersmith\LaravelMemberships\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spoyntersmith\LaravelMemberships\Database\Factories\MembershipFactory;
 
 class Membership extends \Illuminate\Database\Eloquent\Model
 {
     use SoftDeletes;
+    use HasFactory;
+
+    protected $table = 'laravel_memberships_table';
+
+    protected static function newFactory()
+    {
+        return MembershipFactory::new();
+    }
+
     /*
      * Relationships
      */

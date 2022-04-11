@@ -3,8 +3,7 @@
 namespace Spoyntersmith\LaravelMemberships\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Spoyntersmith\LaravelMemberships\Membership;
-use Spoyntersmith\LaravelMemberships\MembershipPlan;
+use Spoyntersmith\LaravelMemberships\Models\MembershipPlan;
 
 class MembershipPlanFactory extends Factory
 {
@@ -14,11 +13,12 @@ class MembershipPlanFactory extends Factory
     {
         return [
             'name' => $this->faker->word,
+            'slug' => $this->faker->slug,
             'description' => $this->faker->sentence,
             'duration' => $this->faker->numberBetween(1, 100),
 
-            'valid_at' => $this->faker->dateTimeBetween('-1 year', '+1 year'),
-            'expires_at' => $this->faker->dateTimeBetween('+1 year', '+2 years'),
+            'started_at' => $this->faker->dateTimeBetween('-1 year', '+1 year'),
+            'expired_at' => $this->faker->dateTimeBetween('+1 year', '+2 years'),
             'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
             'updated_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
         ];

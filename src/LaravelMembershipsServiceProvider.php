@@ -18,7 +18,8 @@ class LaravelMembershipsServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-memberships')
             ->hasConfigFile()
-            ->hasMigration('create_laravel-memberships_table')
+            ->hasMigration('create_laravel_membership_plans_table')
+            ->hasMigration('create_laravel_memberships_table')
             ->hasCommand(LaravelMembershipsCommand::class);
     }
 }
