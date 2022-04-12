@@ -41,7 +41,8 @@ trait InteractsWithMembershipsTrait
      *
      * @param  \Spoyntersmith\LaravelMemberships\Models\Membership  $membership
      */
-    public function removeMembership(string|Membership $membership) {
+    public function removeMembership(string|Membership $membership)
+    {
         $this->memberships()->detach(
             $this->getMembership($membership),
             config('memberships.defaults.touch_on_delete')
